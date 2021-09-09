@@ -23,4 +23,18 @@ public class ContaCorrente {
         Console.WriteLine($"Deposito Realizado!\nSaldo Atual: {this.saldo}");
     }
 
+
+    public bool Transferir(double valor, ContaCorrente conta) {
+        if (this.saldo < valor) {
+            Console.WriteLine($"Transferência Inválida!\nSaldo Atual: {this.saldo}");
+            return false;
+        }
+        else {
+            this.saldo -= valor;
+            conta.Depositar(valor);
+            Console.WriteLine($"Transferência Realizada para {conta.titular}!\nSaldo Atual: {this.saldo}");
+            return true;
+        }
+    }
+
 }

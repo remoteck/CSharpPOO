@@ -11,8 +11,16 @@ namespace ByteBank {
                 saldo = 1500
             };
 
+            ContaCorrente contaMariana = new ContaCorrente() {
+                titular = "Mariana",
+                agenciaNum = 2,
+                contaNum = 2,
+                saldo = 250
+            };
+
             contaLeona.Sacar(78);
             contaLeona.Depositar(500);
+            contaLeona.Transferir(500, contaMariana);
 
             Console.ReadLine();
         }
