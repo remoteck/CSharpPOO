@@ -8,12 +8,12 @@ namespace ByteBank {
     class Program {
         static void Main(string[] args) {
 
-            ContaCorrente contaLeona = new ContaCorrente();
-
-            contaLeona.titular = "Leona Figueiredo Perroni";
-            contaLeona.agenciaNum = 260821;
-            contaLeona.contaNum = 1;
-            contaLeona.saldo = 1000;
+            ContaCorrente contaLeona = new ContaCorrente() {
+                titular = "Leona Figueiredo Perroni",
+                agenciaNum = 260821,
+                contaNum = 1,
+                saldo = 1000
+            };
 
             Console.WriteLine($"Titular da Conta: {contaLeona.titular}");
             Console.WriteLine($"Agência: {contaLeona.agenciaNum}");
